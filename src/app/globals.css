@@ -86,13 +86,13 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 a {
@@ -102,6 +102,53 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* box-shadow: 2px 1px 10px 1px rgba(5, 5, 5, 0.514); */
+  /* border-bottom: 1px solid gray; */
+}
+.leftDiv {
+  justify-content: space-between;
+  display: flex;
+  font-size: 14px;
+  padding: 20px;
+  width: 30%;
+  color: #454545;
+
+  font-weight: 400 !important;
+}
+.Hell {
+  border-bottom: 2px solid #936f01;
+  padding-bottom: 4px;
+}
+.rightDiv {
+  display: flex;
+  font-size: 14px;
+  padding: 20px;
+  width: 30%;
+  color: #454545;
+  justify-content: space-between;
+}
+.bookBtn {
+  padding: 5px 10px;
+  border: none;
+  background-color: #936f01;
+  color: white;
+  border-radius: 5.45px;
+}
+.middleDiv {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+  background: white;
+}
+.middleDiv img {
+  width: 250px;
 }
