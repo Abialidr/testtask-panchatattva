@@ -47,6 +47,33 @@ export default function Home() {
       name: 'Detoxification',
     },
   ];
+  const data = [
+    {
+      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
+      img: '/1.png',
+      name: 'Rajesh Goenka (Business)',
+    },
+    {
+      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
+      img: '/2.png',
+      name: 'Mahesh Goenka (Business)',
+    },
+    {
+      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
+      img: '/3.png',
+      name: 'Kajesh Goenka (Business)',
+    },
+    {
+      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
+      img: '/4.png',
+      name: 'Vajesh Goenka (Business)',
+    },
+    {
+      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
+      img: '/5.png',
+      name: 'Yajesh Goenka (Business)',
+    },
+  ];
   return (
     <div className='mainDiv'>
       <div
@@ -363,14 +390,14 @@ export default function Home() {
               </article>
               <article>
                 <img
-                  src='/bxs_phone-call.png'
+                  src='/ic_sharp-email.png'
                   alt=''
                 />
                 <span>info@panchatattva.in</span>
               </article>
               <article>
                 <img
-                  src='/bxs_phone-call.png'
+                  src='/carbon_location-filled.png'
                   alt=''
                 />
                 <span>
@@ -524,7 +551,7 @@ export default function Home() {
                   experience. The staff was friendly and welcoming, creating a
                   warm and calming atmosphere.
                 </p>
-                <p style={{ fontSize: '40px' }}>{'>'}</p>
+                <p style={{ fontSize: '40px', cursor: 'pointer' }}>{'>'}</p>
               </span>
               <article>
                 <span>Elisa Grant</span>

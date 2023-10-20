@@ -248,12 +248,14 @@ export default function RootLayout({ children }) {
                       color: '#936F01',
                     }}
                   >
-                    <span>Home</span>
-                    <span>About Us</span>
-                    <span>Our Healing Center</span>
-                    <span>News & Media</span>
-                    <span>Programs</span>
-                    <span>Online Programs</span>
+                    <span style={{ cursor: 'pointer' }}>Home</span>
+                    <span style={{ cursor: 'pointer' }}>About Us</span>
+                    <span style={{ cursor: 'pointer' }}>
+                      Our Healing Center
+                    </span>
+                    <span style={{ cursor: 'pointer' }}>News & Media</span>
+                    <span style={{ cursor: 'pointer' }}>Programs</span>
+                    <span style={{ cursor: 'pointer' }}>Online Programs</span>
                   </div>
                   <Image
                     src='/map.png'
@@ -272,10 +274,10 @@ export default function RootLayout({ children }) {
                       color: '#936F01',
                     }}
                   >
-                    <span>Privacy Policy</span>
-                    <span>Term & Conditions</span>
-                    <span>Copyright Policy</span>
-                    <span>Disclaimer</span>
+                    <span style={{ cursor: 'pointer' }}>Privacy Policy</span>
+                    <span style={{ cursor: 'pointer' }}>Term & Conditions</span>
+                    <span style={{ cursor: 'pointer' }}>Copyright Policy</span>
+                    <span style={{ cursor: 'pointer' }}>Disclaimer</span>
                   </div>
                 </div>
               </div>
@@ -294,6 +296,7 @@ export default function RootLayout({ children }) {
                     gap: '15px',
                     color: '#936F01',
                     alignItems: 'center',
+                    cursor: 'pointer',
                   }}
                 >
                   <img
@@ -308,10 +311,11 @@ export default function RootLayout({ children }) {
                     gap: '15px',
                     color: '#936F01',
                     alignItems: 'center',
+                    cursor: 'pointer',
                   }}
                 >
                   <img
-                    src='/callicon.png'
+                    src='/mail.png'
                     alt=''
                   />{' '}
                   <span>info@panchatattva.in</span>
@@ -322,10 +326,11 @@ export default function RootLayout({ children }) {
                     gap: '15px',
                     color: '#936F01',
                     alignItems: 'center',
+                    cursor: 'pointer',
                   }}
                 >
                   <img
-                    src='/callicon.png'
+                    src='/mao icon.png'
                     alt=''
                   />{' '}
                   <span>

@@ -349,6 +349,7 @@
 .card1ReadLess {
   color: #936f01;
   text-decoration: underline;
+  cursor: pointer;
 }
 .aboutUsdiv {
   display: flex;
@@ -413,6 +414,7 @@
   color: #936e01d7;
   background: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 .WhyChooseUsdiv {
   display: flex;
@@ -510,6 +512,7 @@
   box-shadow: 0px 0px 12px 0px #00000036;
   border-radius: 8px;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 .OHCcard:hover {
   transform: scale(1.1);
@@ -778,6 +781,7 @@
   border-radius: 8px;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 }
 .imgAbsolute1 {
   position: absolute;
