@@ -18,26 +18,19 @@ const poppins = Poppins({
 
 export default function RootLayout({ children }) {
   const { innerWidth: windowWidth } = useWindowSize();
-  const [hello, setHello] = useState({
+  const [header, setHeader] = useState("Home");
+  const [headerCircle, setHeaderCircle] = useState({
     first: 1100,
     second: 750,
     curve: 895,
   });
   useEffect(() => {
-    console.log('bsfvijhbvfib');
-    const first = 1100,
-      second = 750,
-      curve = 895;
+    console.log("bsfvijhbvfib");
+    const first = (880 * innerWidth) / 1440,
+      second = (553 * innerWidth) / 1440,
+      curve = (695 * innerWidth) / 1440;
 
-    console.log(
-      `🚀 ~ file: layout.js:29 ~ useEffect ~ first
-      second
-      curve:`,
-      first,
-      second,
-      curve
-    );
-    setHello({
+    setHeaderCircle({
       first,
       second,
       curve,
@@ -47,62 +40,182 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={poppins.className}>
         <div>
-          <div
-            style={{
-              position: 'absolute',
-              zIndex: '3',
-              width: `100%`,
-              height: '175px',
-            }}
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width={`100%`}
-              height='180'
-              viewBox={`0 0 ${windowWidth} 178`}
-              fill='none'
-            >
-              <path
-                d={`M0 0H${windowWidth}V88H${hello.first}C${hello.curve}.212 280 ${hello.second} 88 ${hello.second} 88C422.59 88 0 88 0 88V0Z`}
-                fill='white'
-                style={{
-                  filter: 'drop-shadow(1px 1px 5px rgba(5, 5, 5,0.514))',
-                }}
-              />
-            </svg>
-          </div>
-          <div
-            className='Header'
-            style={{
-              width: '100%',
-              height: '88px',
-              position: 'relative',
-              backgroundColor: '#FFFFFF',
-              zIndex: '4',
-            }}
-          >
-            <div className='leftDiv'>
-              <article className='Hell'>Home</article>
-              <article className='Hell'>About Us</article>
-              <article className='Hell'>Our Healing Center</article>
-              <article className='Hell'>Healing Stories</article>
+          <div style={{ position: "relative" }}>
+            <div
+              style={{
+                position: "absolute",
+                zIndex: "3",
+                width: `100%`,
+                height: "175px",
+              }}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={`100%`}
+                height="180"
+                viewBox={`0 0 ${windowWidth} 178`}
+                fill="none">
+                <path
+                  //   <svg xmlns="http://www.w3.org/2000/svg" width="1536" height="174" viewBox="0 0 1536 174" fill="none">
+                  //   <path d="M0 0H1536V88H938.667C741.559 280 589.867 88 589.867 88C450.763 88 0 88 0 88V0Z" fill="white"/>
+                  // </svg>
+                  d={`M0 0H${windowWidth}V88H${headerCircle.first}C${headerCircle.curve} 280 ${headerCircle.second} 88 ${headerCircle.second} 88C422.59 88 0 88 0 88V0Z`}
+                  fill="white"
+                  style={{
+                    filter: "drop-shadow(1px 1px 5px rgba(5, 5, 5,0.514))",
+                  }}
+                />
+              </svg>
             </div>
-            <div className='middleDiv'>
-              <img
-                src='/Rectangle 2.png'
-                alt=''
-              />
-            </div>
-            <div className='rightDiv'>
-              <article className='Hell'>Program</article>
-              <article className='Hell'>News & Media</article>
-              <article className='Hell'>Online Programs</article>
-              <article className=''>
-                <button className='bookBtn'>Book Appointment</button>
-              </article>
+            <div
+              className="Header"
+              style={{
+                width: "100%",
+                height: "88px",
+                position: "relative",
+                backgroundColor: "#FFFFFF",
+                zIndex: "4",
+              }}>
+              <div className="leftDiv">
+                <article
+                  className={header === "Home" ? "Hell" : "NoHell"}
+                  onClick={() => {
+                    setHeader("Home");
+                  }}>
+                  Home
+                </article>
+                <article
+                  className={header === "About Us" ? "Hell" : "NoHell"}
+                  onClick={() => {
+                    setHeader("About Us");
+                  }}>
+                  About Us
+                </article>
+                <article
+                  className={
+                    header === "Our Healing Center" ? "Hell" : "NoHell"
+                  }
+                  onClick={() => {
+                    setHeader("Our Healing Center");
+                  }}>
+                  Our Healing Center
+                </article>
+                <article
+                  className={header === "Healing Stories" ? "Hell" : "NoHell"}
+                  onClick={() => {
+                    setHeader("Healing Stories");
+                  }}>
+                  Healing Stories
+                </article>
+              </div>
+              <div className="middleDiv">
+                <img src="/Rectangle 2.png" alt="" />
+              </div>
+              <div className="rightDiv">
+                <article
+                  className={header === "Program" ? "Hell" : "NoHell"}
+                  onClick={() => {
+                    setHeader("Program");
+                  }}>
+                  Program
+                </article>
+                <article
+                  className={header === "News & Media" ? "Hell" : "NoHell"}
+                  onClick={() => {
+                    setHeader("News & Media");
+                  }}>
+                  News & Media
+                </article>
+                <article
+                  className={header === "Online Programs" ? "Hell" : "NoHell"}
+                  onClick={() => {
+                    setHeader("Online Programs");
+                  }}>
+                  Online Programs
+                </article>
+                <article className="">
+                  <button className="bookBtn">Book Appointment</button>
+                </article>
+              </div>
             </div>
           </div>
           {children}
+          <div
+            className="Footer"
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "682px",
+              marginTop: "100px",
+              // background: "black",
+              background:
+                "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 5.13%, rgba(147, 111, 1, 0.25) 98.18%)",
+              border: "1px solid black",
+            }}>
+            <Image
+              src="/flower.png"
+              height="490"
+              width="810"
+              style={{
+                position: "absolute",
+                opacity: "0.3",
+                transform: "rotate(304deg) translate(-272px, -236px)",
+                // top: "-30px",
+                // right: "-10%",
+              }}></Image>
+            <Image
+              src="/flower2.png"
+              height="490"
+              width="810"
+              style={{
+                position: "absolute",
+                opacity: "0.3",
+                transform: "rotate(235deg) ",
+                top: "95px",
+                right: "-335px",
+                // top: "-30px",
+                // right: "-10%",
+              }}></Image>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+                height: "100%",
+              }}>
+              <div
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  height: "fit-content",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}>
+                <Image src="/rectangle 2.png" height="148" width="359"></Image>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  height: "fit-content",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  paddingTop: "20px",
+                }}>
+                <div
+                  style={{
+                    display: "flex",
+                    width: "fit-content",
+                    height: "fit-content",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}>
+                  <div></div>
+                  <Image src="/map.png" height="275" width="426"></Image>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </body>
     </html>
