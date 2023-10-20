@@ -9,71 +9,71 @@ export default function Home() {
   const { innerWidth: windowWidth } = useWindowSize();
   const arr = [
     {
-      img: '/Group1.png',
-      name: 'Weight management',
+      img: "/Group1.png",
+      name: "Weight management",
     },
     {
-      img: '/Group2.png',
-      name: 'Diabetes management',
+      img: "/Group2.png",
+      name: "Diabetes management",
     },
     {
-      img: '/Group3.png',
-      name: 'Cardiac Care',
+      img: "/Group3.png",
+      name: "Cardiac Care",
     },
     {
-      img: '/Group4.png',
-      name: 'Pain management',
+      img: "/Group4.png",
+      name: "Pain management",
     },
     {
-      img: '/Group5.png',
-      name: 'Hormonal Care',
+      img: "/Group5.png",
+      name: "Hormonal Care",
     },
     {
-      img: '/Group6.png',
-      name: 'Skin Care',
+      img: "/Group6.png",
+      name: "Skin Care",
     },
     {
-      img: '/Group7.png',
-      name: 'Allergy  Care',
+      img: "/Group7.png",
+      name: "Allergy  Care",
     },
     {
-      img: '/Group8.png',
-      name: 'Pregnancy Care',
+      img: "/Group8.png",
+      name: "Pregnancy Care",
     },
     {
-      img: '/Group9.png',
-      name: 'Stress Management',
+      img: "/Group9.png",
+      name: "Stress Management",
     },
     {
-      img: '/Group10.png',
-      name: 'Detoxification',
+      img: "/Group10.png",
+      name: "Detoxification",
     },
   ];
   const data = [
     {
-      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
-      img: '/1.png',
-      name: 'Rajesh Goenka (Business)',
+      text: "“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”",
+      img: "/1.png",
+      name: "Rajesh Goenka (Business)",
     },
     {
-      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
-      img: '/2.png',
-      name: 'Mahesh Goenka (Business)',
+      text: "“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”",
+      img: "/2.png",
+      name: "Mahesh Goenka (Business)",
     },
     {
-      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
-      img: '/3.png',
-      name: 'Kajesh Goenka (Business)',
+      text: "“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”",
+      img: "/3.png",
+      name: "Kajesh Goenka (Business)",
     },
     {
-      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
-      img: '/4.png',
-      name: 'Vajesh Goenka (Business)',
+      text: "“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”",
+      img: "/4.png",
+      name: "Vajesh Goenka (Business)",
     },
     {
-      text: '“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”',
-      img: '/5.png',
-      name: 'Yajesh Goenka (Business)',
+      text: "“I have Diabetes for the last 20 years for which I have been taking up to 20 units of insulin everyday along with other regular medicines to control my sugar level. One of my relatives informed me about Panchatattva and I planned a visit. Within 2 months of following the diet plan, the results were so positive that at present I no longer need insulin shots and my other medicines have also been reduced to half. I’m grateful to the entire team.”",
+      img: "/5.png",
+      name: "Yajesh Goenka (Business)",
     },
   ];
   const [isOpen, setIsOpen] = useState(false);
@@ -111,14 +111,14 @@ export default function Home() {
   const [activeDot, setActiveDot] = useState(0);
 
   const nextImage1 = () => {
-    const newIndex = (activeIndex + 1) % images.length;
+    const newIndex = (activeIndex + 1) % data.length;
     setActiveIndex(newIndex);
     setTranslateX(-newIndex * 100);
     setActiveDot(newIndex);
   };
 
   const prevImage1 = () => {
-    const newIndex = (activeIndex - 1 + images.length) % images.length;
+    const newIndex = (activeIndex - 1 + data.length) % data.length;
     setActiveIndex(newIndex);
     setTranslateX(-newIndex * 100);
     setActiveDot(newIndex);
@@ -209,10 +209,7 @@ export default function Home() {
         <div className={styles.card1}>
           <article className={styles.card1UpperPart}>
             <p className={styles.imgContainer}>
-              <img
-                src='/vihar.png'
-                alt=''
-              />
+              <img src="/vihar.png" alt="" />
             </p>
             <p className={styles.CardName}>Vihaar</p>
           </article>
@@ -228,10 +225,7 @@ export default function Home() {
         <div className={styles.card1}>
           <article className={styles.card1UpperPart}>
             <p className={styles.imgContainer}>
-              <img
-                src='/nidra.png'
-                alt=''
-              />
+              <img src="/nidra.png" alt="" />
             </p>
             <p className={styles.CardName}>Nidra</p>
           </article>
@@ -248,10 +242,7 @@ export default function Home() {
         <div className={styles.card1}>
           <article className={styles.card1UpperPart}>
             <p className={styles.imgContainer}>
-              <img
-                src='/dhyana.png'
-                alt=''
-              />
+              <img src="/dhyana.png" alt="" />
             </p>
             <p className={styles.CardName}>Dhyana</p>
           </article>
@@ -311,9 +302,9 @@ export default function Home() {
           <article>
             <span className={styles.mcuimgContainer}>
               <img
-                src='/Group.png'
-                alt=''
-                style={{ width: '40px', height: '40px' }}
+                src="/Group.png"
+                alt=""
+                style={{ width: "40px", height: "40px" }}
               />
             </span>
             <span className={styles.mcuimgHead}>
@@ -328,9 +319,9 @@ export default function Home() {
           <article>
             <span className={styles.mcuimgContainer}>
               <img
-                src='/ebm.png'
-                alt=''
-                style={{ width: '40px', height: '40px' }}
+                src="/ebm.png"
+                alt=""
+                style={{ width: "40px", height: "40px" }}
               />
             </span>
             <span className={styles.mcuimgHead}>Evidenced Based Medicine</span>
@@ -342,9 +333,9 @@ export default function Home() {
           <article>
             <span className={styles.mcuimgContainer}>
               <img
-                src='/individual appraisal-appraisal-assessment-evaluate-review-test.png'
-                alt=''
-                style={{ width: '40px', height: '40px' }}
+                src="/individual appraisal-appraisal-assessment-evaluate-review-test.png"
+                alt=""
+                style={{ width: "40px", height: "40px" }}
               />
             </span>
             <span className={styles.mcuimgHead}>Individualized programs</span>
@@ -359,9 +350,9 @@ export default function Home() {
           <article>
             <span className={styles.mcuimgContainer}>
               <img
-                src='/noun-virtual-4654903 1.png'
-                alt=''
-                style={{ width: '40px', height: '40px' }}
+                src="/noun-virtual-4654903 1.png"
+                alt=""
+                style={{ width: "40px", height: "40px" }}
               />
             </span>
             <span className={styles.mcuimgHead}>Virtual programs</span>
@@ -376,16 +367,8 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.OurHealingCenterDiv}>
-        <img
-          src='/flower2.png'
-          alt=''
-          className={styles.imgAbsolute5}
-        />
-        <img
-          src='/flower2.png'
-          alt=''
-          className={styles.imgAbsolute6}
-        />
+        <img src="/flower2.png" alt="" className={styles.imgAbsolute5} />
+        <img src="/flower2.png" alt="" className={styles.imgAbsolute6} />
         <span className={styles.OurHealingCenterSpan}>Our Healing Center</span>
         <div className={styles.OurHealingCenterMainDiv}>
           <div className={styles.OHCcard}>
@@ -393,17 +376,11 @@ export default function Home() {
             <span>Relieve Ache & pains</span>
           </div>
           <div className={styles.OHCcard}>
-            <img
-              src='/Rectangle 38691.png'
-              alt=''
-            />
+            <img src="/Rectangle 38691.png" alt="" />
             <span>Healing & Strengthening</span>
           </div>
           <div className={styles.OHCcard}>
-            <img
-              src='/Rectangle 38692.png'
-              alt=''
-            />
+            <img src="/Rectangle 38692.png" alt="" />
             <span>Ayurveda Spa</span>
           </div>
         </div>
@@ -413,13 +390,13 @@ export default function Home() {
         <div className={styles.OurProgrammaindiv}>
           {arr.map((val, key) => {
             return (
-              <div className={styles.OPsqaures}>
+              <div className={styles.OPsqaures} key={key}>
                 <div class={styles.borderbox}></div>
                 <article>
                   <img
                     src={val.img}
-                    alt=''
-                    style={{ width: '45px', height: '45px' }}
+                    alt=""
+                    style={{ width: "45px", height: "45px" }}
                   />
                   <span>{val.name}</span>
                 </article>
@@ -443,29 +420,20 @@ export default function Home() {
             }}>
             <div
               style={{
-                transform: `translateX(${translateX / images.length}%)`,
+                transform: `translateX(${translateX / data.length}%)`,
                 transition: "transform 0.3s",
                 display: "flex",
                 overflow: "hidden",
-                width: `${images.length * 100}%`,
+                width: `${data.length * 100}%`,
               }}>
-              {images.map((image, index) => (
-                <div className={styles.HSmaindivDesdiv}>
-                  “I have Diabetes for the last 20 years for which I have been
-                  taking up to 20 units of insulin everyday along with other
-                  regular medicines to control my sugar level. One of my
-                  relatives informed me about Panchatattva and I planned a
-                  visit. Within 2 months of following the diet plan, the results
-                  were so positive that at present I no longer need insulin
-                  shots and my other medicines have also been reduced to half.
-                  I’m grateful to the entire team.”
-                </div>
+              {data.map((value, index) => (
+                <div className={styles.HSmaindivDesdiv}>{value.text}</div>
               ))}
             </div>
           </div>
         </div>
         <div className={styles.dots}>
-          {images.map((image, index) => (
+          {data.map((value, index) => (
             <span
               key={index}
               className={styles.dot}
@@ -476,7 +444,7 @@ export default function Home() {
               onClick={() => goToImage(index)}>
               <img
                 key={index}
-                src={image}
+                src={value.img}
                 alt={`Image ${index + 1}`}
                 style={{
                   width: index === activeDot ? "73px" : "41px",
@@ -513,52 +481,23 @@ export default function Home() {
       <div className={styles.BookApp}>
         <span className={styles.OurHealingCenterSpan}>Book Appointment </span>
         <div className={styles.OurHealingCentermainDiv}>
-          <img
-            src='/flower2.png'
-            alt=''
-            className={styles.imgAbsolute1}
-          />
-          <img
-            src='/flower2.png'
-            alt=''
-            className={styles.imgAbsolute2}
-          />
-          <img
-            src='/flower2.png'
-            alt=''
-            className={styles.imgAbsolute3}
-          />
-          <img
-            src='/flower2.png'
-            alt=''
-            className={styles.imgAbsolute4}
-          />
+          <img src="/flower2.png" alt="" className={styles.imgAbsolute1} />
+          <img src="/flower2.png" alt="" className={styles.imgAbsolute2} />
+          <img src="/flower2.png" alt="" className={styles.imgAbsolute3} />
+          <img src="/flower2.png" alt="" className={styles.imgAbsolute4} />
           <div className={styles.leftDivOH}>
-            <img
-              src='/Logo-2 1.png'
-              alt=''
-              style={{ width: '450px' }}
-            />
+            <img src="/Logo-2 1.png" alt="" style={{ width: "450px" }} />
             <div className={styles.OHcontactDiv}>
               <article>
-                <img
-                  src='/bxs_phone-call.png'
-                  alt=''
-                />
+                <img src="/bxs_phone-call.png" alt="" />
                 <span>+91 8178546612</span>
               </article>
               <article>
-                <img
-                  src='/ic_sharp-email.png'
-                  alt=''
-                />
+                <img src="/ic_sharp-email.png" alt="" />
                 <span>info@panchatattva.in</span>
               </article>
               <article>
-                <img
-                  src='/carbon_location-filled.png'
-                  alt=''
-                />
+                <img src="/carbon_location-filled.png" alt="" />
                 <span>
                   Panchatattva, C-175, Sector 100, Noida, Uttar Pradesh – 201303
                 </span>
@@ -567,85 +506,49 @@ export default function Home() {
           </div>
           <div className={styles.RightDivOH}>
             <div className={styles.form}>
-              <input
-                type='text'
-                placeholder='Enter Full Name'
-              />
-              <input
-                type='text'
-                placeholder='Email'
-              />
-              <input
-                type='text'
-                placeholder='Phone Number'
-              />
+              <input type="text" placeholder="Enter Full Name" />
+              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Phone Number" />
               <div className={styles.gridForm}>
-                <select
-                  name=''
-                  id=''
-                >
-                  <option value=''>Male</option>
-                  <option value=''>Female</option>
+                <select name="" id="">
+                  <option value="">Male</option>
+                  <option value="">Female</option>
                 </select>
-                <select
-                  name=''
-                  id=''
-                >
-                  <option value=''>Male</option>
-                  <option value=''>Female</option>
+                <select name="" id="">
+                  <option value="">Male</option>
+                  <option value="">Female</option>
                 </select>
-                <select
-                  name=''
-                  id=''
-                >
-                  <option value=''>Male</option>
-                  <option value=''>Female</option>
+                <select name="" id="">
+                  <option value="">Male</option>
+                  <option value="">Female</option>
                 </select>
-                <select
-                  name=''
-                  id=''
-                >
-                  <option value=''>Male</option>
-                  <option value=''>Female</option>
+                <select name="" id="">
+                  <option value="">Male</option>
+                  <option value="">Female</option>
                 </select>
-                <input
-                  placeholder='Type of Appointment'
-                  type='text'
-                />
-                <select
-                  name=''
-                  id=''
-                >
-                  <option value=''>Male</option>
-                  <option value=''>Female</option>
+                <input placeholder="Type of Appointment" type="text" />
+                <select name="" id="">
+                  <option value="">Male</option>
+                  <option value="">Female</option>
                 </select>
                 <div className={styles.radieoBtndiv}>
                   <article>
-                    <label htmlFor='radio1'>In Person</label>
-                    <input
-                      type='radio'
-                      name='Selction'
-                      id='radio1'
-                    />
+                    <label htmlFor="radio1">In Person</label>
+                    <input type="radio" name="Selction" id="radio1" />
                   </article>
                   <article>
-                    <label htmlFor='radio2'>Virtual</label>
-                    <input
-                      type='radio'
-                      name='Selction'
-                      id='radio2'
-                    />
+                    <label htmlFor="radio2">Virtual</label>
+                    <input type="radio" name="Selction" id="radio2" />
                   </article>
                 </div>
               </div>
 
               <textarea
-                name=''
-                id=''
-                cols='30'
-                rows='5'
-                placeholder='Describe Health Issue'
-              ></textarea>
+                name=""
+                id=""
+                cols="30"
+                rows="5"
+                placeholder="Describe Health Issue"></textarea>
               <button>Book Appointment</button>
             </div>
           </div>
@@ -658,26 +561,25 @@ export default function Home() {
         <div className={styles.ReviewTestimonialsMainDiv}>
           <div
             style={{
-              background: 'white',
-              position: 'absolute',
-              zIndex: '10',
-              top: '-60px',
-              left: '50px',
-              height: '344px',
-              width: '220px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '8px',
-            }}
-          >
+              background: "white",
+              position: "absolute",
+              zIndex: "10",
+              top: "-60px",
+              left: "50px",
+              height: "344px",
+              width: "220px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "8px",
+            }}>
             <img
-              height='336px'
-              width='212px'
-              src='https://images.unsplash.com/photo-1592621385645-e41659e8aabe?auto=format&fit=crop&q=80&w=1894&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              alt=''
+              height="336px"
+              width="212px"
+              src="https://images.unsplash.com/photo-1592621385645-e41659e8aabe?auto=format&fit=crop&q=80&w=1894&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
               style={{
-                borderRadius: '8px',
+                borderRadius: "8px",
               }}
             />
           </div>
@@ -685,32 +587,25 @@ export default function Home() {
           <div className={styles.ReviewTestimonialsdescDiv}>
             <div></div>
             <div className={styles.ReviewTestimonialsdesc}>
-              <div
-                className={styles.rating}
-                style={{ width: '100%' }}
-              >
-                <img
-                  src='/Group 1000001872.png'
-                  alt=''
-                />
+              <div className={styles.rating} style={{ width: "100%" }}>
+                <img src="/Group 1000001872.png" alt="" />
                 4.5 rating
               </div>
               <span
                 style={{
-                  fontSize: '18px',
-                  color: 'white',
-                  opacity: '1',
-                  display: 'flex',
-                  alignItems: 'center',
-                  zIndex: '20',
-                }}
-              >
+                  fontSize: "18px",
+                  color: "white",
+                  opacity: "1",
+                  display: "flex",
+                  alignItems: "center",
+                  zIndex: "20",
+                }}>
                 <p>
                   I recently visited the Ayurvedic Clinic and had a wonderful
                   experience. The staff was friendly and welcoming, creating a
                   warm and calming atmosphere.
                 </p>
-                <p style={{ fontSize: '40px', cursor: 'pointer' }}>{'>'}</p>
+                <p style={{ fontSize: "40px", cursor: "pointer" }}>{">"}</p>
               </span>
               <article>
                 <span>Elisa Grant</span>
