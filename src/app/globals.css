@@ -82,7 +82,6 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
@@ -161,6 +160,53 @@ a {
   top: 5%;
   background: white;
 }
-.middleDiv img {
+.middleDiv > img {
   width: 250px;
+}
+
+.upward-list {
+  position: relative;
+  z-index: 10;
+}
+
+.toggle-button {
+  height: 41px;
+  width: 41px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 17px;
+  right: 75px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.toggle-button :focus {
+  border: none;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  position: absolute;
+  bottom: 0;
+  width: fit-content;
+  border-top: none; /* Remove the top border */
+  border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+  bottom: 58px;
+  right: 75px;
+}
+
+.list.open {
+  max-height: 200px; /* Change to your preferred value */
+  transition: max-height 0.5s;
+}
+
+.image-transition {
+  transition: all 1s ease; /* You can adjust the duration and easing as needed */
 }

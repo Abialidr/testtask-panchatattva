@@ -1,8 +1,10 @@
-'use client';
-import Image from 'next/image';
-import styles from './page.module.css';
-import useWindowSize from '@rooks/use-window-size';
-
+"use client";
+import Image from "next/image";
+import styles from "./page.module.css";
+import useWindowSize from "@rooks/use-window-size";
+import { useState } from "react";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function Home() {
   const { innerWidth: windowWidth } = useWindowSize();
   const arr = [
@@ -74,25 +76,122 @@ export default function Home() {
       name: 'Yajesh Goenka (Business)',
     },
   ];
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleList = () => {
+    setIsOpen(!isOpen);
+  };
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [fade, setFade] = useState(false);
+  const images = [
+    "/image 4.png",
+    "/Group 1000001859.png",
+    "/Group 1000001871.png",
+    "/Group 1000001872.jpg",
+  ];
+  const nextImage = () => {
+    setFade(true);
+    setTimeout(() => {
+      setActiveIndex((activeIndex + 1) % images.length);
+      setFade(false);
+    }, 300); // Change the duration to match your transition duration
+  };
+
+  const prevImage = () => {
+    setFade(true);
+    setTimeout(() => {
+      setActiveIndex((activeIndex - 1 + images.length) % images.length);
+      setFade(false);
+    }, 300); // Change the duration to match your transition duration
+  };
+
+  const [translateX, setTranslateX] = useState(0);
+
+  // State to keep track of the currently active dot
+  const [activeDot, setActiveDot] = useState(0);
+
+  const nextImage1 = () => {
+    const newIndex = (activeIndex + 1) % images.length;
+    setActiveIndex(newIndex);
+    setTranslateX(-newIndex * 100);
+    setActiveDot(newIndex);
+  };
+
+  const prevImage1 = () => {
+    const newIndex = (activeIndex - 1 + images.length) % images.length;
+    setActiveIndex(newIndex);
+    setTranslateX(-newIndex * 100);
+    setActiveDot(newIndex);
+  };
+
+  const goToImage = (index) => {
+    setActiveIndex(index);
+    setTranslateX(-index * 100);
+    setActiveDot(index);
+  };
+
   return (
-    <div className='mainDiv'>
-      <div
-        className={styles.bannerImgDiv}
-        style={{ zIndex: '1' }}
-      >
-        <img src='/image 4.png'></img>
-        <div className={styles.rightArrow}>{'>'}</div>
-        <div className={styles.leftArrow}>{'<'}</div>
-        <div className={styles.Downloadbtn}>{'->'}</div>
+    <div className="mainDiv">
+      <div className={styles.bannerImgDiv} style={{ zIndex: "1" }}>
+        <img
+          src={images[activeIndex]}
+          alt={`Image ${activeIndex + 1}`}
+          style={{ opacity: fade ? 0 : 1, transition: "opacity 0.3s" }}
+        />
+        <button className={styles.leftArrow} onClick={prevImage}>
+          <ArrowBackIosIcon
+            style={{
+              position: "absolute",
+              left: "50%",
+              transform: "translatex(-30%)",
+            }}
+          />
+        </button>
+        <button className={styles.rightArrow} onClick={nextImage}>
+          <ArrowForwardIosIcon
+            style={{
+              position: "absolute",
+              left: "50%",
+              transform: "translatex(-40%)",
+            }}
+          />
+        </button>
+        {/* <div className={styles.Downloadbtn}>{'->'}</div> */}
+        <div className="upward-list">
+          <ul className={`list ${isOpen ? "open" : "closed"}`}>
+            <li>
+              <Image src="/phone-call.png" height="41" width="41"></Image>
+            </li>
+            <li>
+              <Image src="/youtube.png" height="41" width="41"></Image>
+            </li>
+            <li>
+              <Image src="/facebook.png" height="41" width="41"></Image>
+            </li>
+            <li>
+              <Image src="/instagram.png" height="41" width="41"></Image>
+            </li>
+          </ul>
+          <button className={`toggle-button`} onClick={toggleList}>
+            {/* <Grow in={isOpen}>
+              <Image src="/close.png" height="41" width="41"></Image>
+            </Grow>
+            <Grow in={!isOpen}>
+              <Image src="/share.png" height="41" width="41"></Image>
+            </Grow> */}
+            {isOpen ? (
+              <Image src="/close.png" height="42" width="42"></Image>
+            ) : (
+              <Image src="/share.png" height="41" width="41"></Image>
+            )}
+          </button>
+        </div>
       </div>
       <div className={styles.cards1Div}>
         <div className={styles.card1}>
           <article className={styles.card1UpperPart}>
             <p className={styles.imgContainer}>
-              <img
-                src='/Group 1000001871.png'
-                alt=''
-              />
+              <img src="/Group 1000001871.png" alt="" />
             </p>
             <p className={styles.CardName}>Ahaar</p>
           </article>
@@ -175,11 +274,10 @@ export default function Home() {
             <div className={styles.abusBackground}></div>
             <div className={styles.youtiframe}>
               <iframe
-                width='80%'
-                height='315'
-                src='https://www.youtube.com/embed/i0nOUybPoUg'
-                style={{ borderRadius: '10px' }}
-              ></iframe>
+                width="80%"
+                height="315"
+                src="https://www.youtube.com/embed/i0nOUybPoUg"
+                style={{ borderRadius: "10px" }}></iframe>
             </div>
           </div>
           <div className={styles.aboutUsrightdiv}>
@@ -291,10 +389,7 @@ export default function Home() {
         <span className={styles.OurHealingCenterSpan}>Our Healing Center</span>
         <div className={styles.OurHealingCenterMainDiv}>
           <div className={styles.OHCcard}>
-            <img
-              src='/Rectangle 3869.png'
-              alt=''
-            />
+            <img src="/Rectangle 3869.png" alt="" />
             <span>Relieve Ache & pains</span>
           </div>
           <div className={styles.OHCcard}>
@@ -334,22 +429,86 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.HealingStory}>
-        <img
-          src='/Group 1000001859.png'
-          alt=''
-        />
+        <img src="/Group 1000001859.png" alt="" />
         <div className={styles.HSmainDiv}>
           <span className={styles.OurHealingCenterSpan}>Healing Story</span>
-          <div className={styles.HSmaindivDesdiv}>
-            “I have Diabetes for the last 20 years for which I have been taking
-            up to 20 units of insulin everyday along with other regular
-            medicines to control my sugar level. One of my relatives informed me
-            about Panchatattva and I planned a visit. Within 2 months of
-            following the diet plan, the results were so positive that at
-            present I no longer need insulin shots and my other medicines have
-            also been reduced to half. I’m grateful to the entire team.”
+          <div
+            style={{
+              position: "relative",
+              width: "63%",
+              overflow: "hidden",
+              marginLeft: "18px",
+              // boxShadow: " 0px 4px 4px 0px #00000036",
+              height: "fit-content",
+            }}>
+            <div
+              style={{
+                transform: `translateX(${translateX / images.length}%)`,
+                transition: "transform 0.3s",
+                display: "flex",
+                overflow: "hidden",
+                width: `${images.length * 100}%`,
+              }}>
+              {images.map((image, index) => (
+                <div className={styles.HSmaindivDesdiv}>
+                  “I have Diabetes for the last 20 years for which I have been
+                  taking up to 20 units of insulin everyday along with other
+                  regular medicines to control my sugar level. One of my
+                  relatives informed me about Panchatattva and I planned a
+                  visit. Within 2 months of following the diet plan, the results
+                  were so positive that at present I no longer need insulin
+                  shots and my other medicines have also been reduced to half.
+                  I’m grateful to the entire team.”
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+        <div className={styles.dots}>
+          {images.map((image, index) => (
+            <span
+              key={index}
+              className={styles.dot}
+              style={{
+                width: index === activeDot ? "73px" : "41px",
+                height: index === activeDot ? "73px" : "41px",
+              }}
+              onClick={() => goToImage(index)}>
+              <img
+                key={index}
+                src={image}
+                alt={`Image ${index + 1}`}
+                style={{
+                  width: index === activeDot ? "73px" : "41px",
+                  height: index === activeDot ? "73px" : "41px",
+                }}
+              />
+            </span>
+          ))}
+        </div>
+        <button
+          className={`${styles.navbutton}`}
+          style={{ top: "242px", left: "63px" }}
+          onClick={prevImage1}>
+          <ArrowBackIosIcon
+            style={{
+              height: "71px",
+              width: "71px",
+            }}
+          />
+        </button>
+
+        <button
+          className={`${styles.navbutton}`}
+          onClick={nextImage1}
+          style={{ top: "242px", right: "63px" }}>
+          <ArrowForwardIosIcon
+            style={{
+              height: "71px",
+              width: "71px",
+            }}
+          />
+        </button>
       </div>
       <div className={styles.BookApp}>
         <span className={styles.OurHealingCenterSpan}>Book Appointment </span>
