@@ -289,3 +289,335 @@
   font-weight: bold;
   transform: rotate(90deg);
 }
+.cards1Div {
+  width: 100%;
+  display: grid;
+  margin-top: 35px;
+  padding: 25px 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: fit-content;
+}
+.card1 {
+  width: 100%;
+  /* max-width: 310px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #936f01;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.267);
+  height: 100%;
+}
+.card1UpperPart {
+  padding: 20px;
+  background-color: #936f01;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  min-height: 135px;
+}
+.imgContainer {
+  background-color: #ffffffce;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgContainer img {
+  width: 38px;
+}
+.card1LowerPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
+  padding: 20px 40px;
+  font-size: 13px;
+}
+.card1ReadLess {
+  color: #936f01;
+  text-decoration: underline;
+}
+.aboutUsdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* margin-top: 50px; */
+  padding: 50px;
+  gap: 28px;
+}
+.AboutUsSpan {
+  font-size: 33px;
+  font-weight: 600;
+}
+.aboutUsMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.aboutUsleftdiv {
+  width: 100%;
+  height: 395px;
+  position: relative;
+}
+.abusBackground {
+  width: 60%;
+  height: 100%;
+  background-color: #936e0179;
+  border-radius: 5px;
+}
+.youtiframe {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 95%;
+  right: 0;
+  border-radius: 6px;
+}
+.aboutUsrightdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutUsrightdivMain {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+.abusname {
+  font-size: 24px;
+  font-weight: 500;
+  color: #936f01;
+}
+.abusDesc {
+  font-size: 15px;
+  margin-left: 10px;
+}
+.abusreadmore {
+  padding: 15px 60px;
+  border: 1px solid #936f01;
+  color: #936e01d7;
+  background: none;
+  border-radius: 8px;
+}
+.WhyChooseUsdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+.WhyChooseUsSpan {
+  font-size: 33px;
+  font-weight: 600;
+}
+.WhyChooseUsMainDiv {
+  display: flex;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #936e01e7;
+  padding: 50px;
+  width: 100%;
+  justify-content: center;
+}
+.WhyChooseUsMainDiv article {
+  background-color: white;
+  padding: 30px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.mcuimgContainer {
+  display: flex;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #936f01;
+}
+.mcuimgHead {
+  font-size: 14px;
+  color: #936f01;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.mcuimgBody {
+  font-size: 11px;
+  text-align: center;
+  width: 80%;
+}
+.OurHealingCenterDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 60px 0px;
+}
+.OurHealingCenterSpan {
+  font-size: 33px;
+  font-weight: 600;
+}
+.OurHealingCenterMainDiv {
+  display: flex;
+  gap: 55px;
+}
+.OHCcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background-color: #936e0171;
+  width: 323px;
+  height: 401px;
+  padding-top: 30px;
+  box-shadow: 0px 0px 12px 0px #00000036;
+  border-radius: 8px;
+}
+.OHCcard img {
+  width: 80%;
+}
+.OHCcard span {
+  font-size: 20px;
+  color: white;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.OurProgramdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+.OurProgrammaindiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+
+  width: 75%;
+  column-gap: 50px;
+  row-gap: 100px;
+}
+.OPsqaures {
+  height: 150px;
+  width: 150px;
+  font-size: 11px;
+  background-color: #936f01;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.OPsqaures article {
+  transform: rotate(-45deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: 500;
+}
+.borderbox {
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid #936f01;
+  position: absolute;
+  right: 10%;
+  left: 10%;
+  bottom: 10%;
+}
+.HealingStory {
+  display: flex;
+  margin-top: 150px;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+.HealingStory img {
+  width: 100% !important;
+  height: 559px;
+}
+.HSmainDiv {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+.HSmaindivDesdiv {
+  width: 63%;
+  top: 50%;
+  margin-top: 40px;
+  margin-left: 18px;
+  background-color: white;
+  height: 240px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px 0px #00000036;
+}
+.ReviewTestimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 60px 0px;
+  border: 1px solid #936f01;
+  background-color: #f2eee170;
+  margin-bottom: 50px;
+}
+.ReviewTestimonialsMainDiv {
+  position: relative;
+}
+.ReviewTestimonialsdescDiv {
+  background-color: #936f01;
+  width: 705px;
+  height: 283px;
+  background: linear-gradient(to bottom, #936f01, #936e012c);
+  opacity: 0.8;
+  border-radius: 11px;
+}
+.backGrounddiv1 {
+  background-color: rgba(147, 110, 1, 0.192);
+  width: 279px;
+  height: 131px;
+  border-radius: 29px;
+  box-shadow: -2.4px 3.6px 9.59px 3.39px rgba(155, 116, 1, 0.35);
+  position: absolute;
+  bottom: -35px;
+  left: -80px;
+}
+.backGrounddiv2 {
+  background-color: rgba(147, 110, 1, 0.192);
+  width: 142px;
+  height: 155px;
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  border-radius: 25px;
+  box-shadow: 7px -4.24px 11.31px 0px rgba(155, 116, 1, 0.35);
+}
