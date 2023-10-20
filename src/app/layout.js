@@ -3,6 +3,7 @@ import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 import useWindowSize from '@rooks/use-window-size';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({
@@ -18,14 +19,14 @@ const poppins = Poppins({
 
 export default function RootLayout({ children }) {
   const { innerWidth: windowWidth } = useWindowSize();
-  const [header, setHeader] = useState("Home");
+  const [header, setHeader] = useState('Home');
   const [headerCircle, setHeaderCircle] = useState({
     first: 1100,
     second: 750,
     curve: 895,
   });
   useEffect(() => {
-    console.log("bsfvijhbvfib");
+    console.log('bsfvijhbvfib');
     const first = (880 * innerWidth) / 1440,
       second = (553 * innerWidth) / 1440,
       curve = (695 * innerWidth) / 1440;
@@ -40,179 +41,319 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={poppins.className}>
         <div>
-          <div style={{ position: "relative" }}>
+          <div style={{ position: 'relative' }}>
             <div
               style={{
-                position: "absolute",
-                zIndex: "3",
+                position: 'absolute',
+                zIndex: '3',
                 width: `100%`,
-                height: "175px",
-              }}>
+                height: '175px',
+              }}
+            >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns='http://www.w3.org/2000/svg'
                 width={`100%`}
-                height="180"
+                height='180'
                 viewBox={`0 0 ${windowWidth} 178`}
-                fill="none">
+                fill='none'
+              >
                 <path
                   //   <svg xmlns="http://www.w3.org/2000/svg" width="1536" height="174" viewBox="0 0 1536 174" fill="none">
                   //   <path d="M0 0H1536V88H938.667C741.559 280 589.867 88 589.867 88C450.763 88 0 88 0 88V0Z" fill="white"/>
                   // </svg>
                   d={`M0 0H${windowWidth}V88H${headerCircle.first}C${headerCircle.curve} 280 ${headerCircle.second} 88 ${headerCircle.second} 88C422.59 88 0 88 0 88V0Z`}
-                  fill="white"
+                  fill='white'
                   style={{
-                    filter: "drop-shadow(1px 1px 5px rgba(5, 5, 5,0.514))",
+                    filter: 'drop-shadow(1px 1px 5px rgba(5, 5, 5,0.514))',
                   }}
                 />
               </svg>
             </div>
             <div
-              className="Header"
+              className='Header'
               style={{
-                width: "100%",
-                height: "88px",
-                position: "relative",
-                backgroundColor: "#FFFFFF",
-                zIndex: "4",
-              }}>
-              <div className="leftDiv">
+                width: '100%',
+                height: '88px',
+                position: 'relative',
+                backgroundColor: '#FFFFFF',
+                zIndex: '4',
+              }}
+            >
+              <div className='leftDiv'>
                 <article
-                  className={header === "Home" ? "Hell" : "NoHell"}
+                  className={header === 'Home' ? 'Hell' : 'NoHell'}
                   onClick={() => {
-                    setHeader("Home");
-                  }}>
+                    setHeader('Home');
+                  }}
+                >
                   Home
                 </article>
                 <article
-                  className={header === "About Us" ? "Hell" : "NoHell"}
+                  className={header === 'About Us' ? 'Hell' : 'NoHell'}
                   onClick={() => {
-                    setHeader("About Us");
-                  }}>
+                    setHeader('About Us');
+                  }}
+                >
                   About Us
                 </article>
                 <article
                   className={
-                    header === "Our Healing Center" ? "Hell" : "NoHell"
+                    header === 'Our Healing Center' ? 'Hell' : 'NoHell'
                   }
                   onClick={() => {
-                    setHeader("Our Healing Center");
-                  }}>
+                    setHeader('Our Healing Center');
+                  }}
+                >
                   Our Healing Center
                 </article>
                 <article
-                  className={header === "Healing Stories" ? "Hell" : "NoHell"}
+                  className={header === 'Healing Stories' ? 'Hell' : 'NoHell'}
                   onClick={() => {
-                    setHeader("Healing Stories");
-                  }}>
+                    setHeader('Healing Stories');
+                  }}
+                >
                   Healing Stories
                 </article>
               </div>
-              <div className="middleDiv">
-                <img src="/Rectangle 2.png" alt="" />
+              <div className='middleDiv'>
+                <img
+                  src='/Rectangle 2.png'
+                  alt=''
+                />
               </div>
-              <div className="rightDiv">
+              <div className='rightDiv'>
                 <article
-                  className={header === "Program" ? "Hell" : "NoHell"}
+                  className={header === 'Program' ? 'Hell' : 'NoHell'}
                   onClick={() => {
-                    setHeader("Program");
-                  }}>
+                    setHeader('Program');
+                  }}
+                >
                   Program
                 </article>
                 <article
-                  className={header === "News & Media" ? "Hell" : "NoHell"}
+                  className={header === 'News & Media' ? 'Hell' : 'NoHell'}
                   onClick={() => {
-                    setHeader("News & Media");
-                  }}>
+                    setHeader('News & Media');
+                  }}
+                >
                   News & Media
                 </article>
                 <article
-                  className={header === "Online Programs" ? "Hell" : "NoHell"}
+                  className={header === 'Online Programs' ? 'Hell' : 'NoHell'}
                   onClick={() => {
-                    setHeader("Online Programs");
-                  }}>
+                    setHeader('Online Programs');
+                  }}
+                >
                   Online Programs
                 </article>
-                <article className="">
-                  <button className="bookBtn">Book Appointment</button>
+                <article className=''>
+                  <button className='bookBtn'>Book Appointment</button>
                 </article>
               </div>
             </div>
           </div>
           {children}
           <div
-            className="Footer"
+            className='Footer'
             style={{
-              position: "relative",
-              width: "100%",
-              height: "682px",
-              marginTop: "100px",
+              position: 'relative',
+              width: '100%',
+              height: '590px',
+              marginTop: '100px',
               // background: "black",
               background:
-                "linear-gradient(180deg, rgba(255, 255, 255, 0.11) 5.13%, rgba(147, 111, 1, 0.25) 98.18%)",
-              border: "1px solid black",
-            }}>
+                'linear-gradient(180deg, rgba(255, 255, 255, 0.11) 5.13%, rgba(147, 111, 1, 0.25) 98.18%)',
+              // border: '1px solid black',
+              overflow: 'hidden',
+            }}
+          >
             <Image
-              src="/flower.png"
-              height="490"
-              width="810"
+              src='/flower.png'
+              height='490'
+              width='810'
               style={{
-                position: "absolute",
-                opacity: "0.3",
-                transform: "rotate(304deg) translate(-272px, -236px)",
+                position: 'absolute',
+                opacity: '0.3',
+                transform: 'rotate(304deg) translate(-272px, -236px)',
                 // top: "-30px",
                 // right: "-10%",
-              }}></Image>
+              }}
+            ></Image>
             <Image
-              src="/flower2.png"
-              height="490"
-              width="810"
+              src='/flower2.png'
+              height='490'
+              width='810'
               style={{
-                position: "absolute",
-                opacity: "0.3",
-                transform: "rotate(235deg) ",
-                top: "95px",
-                right: "-335px",
+                position: 'absolute',
+                opacity: '0.3',
+                transform: 'rotate(235deg) ',
+                top: '95px',
+                right: '-335px',
                 // top: "-30px",
                 // right: "-10%",
-              }}></Image>
+              }}
+            ></Image>
             <div
               style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "100%",
-                height: "100%",
-              }}>
+                display: 'flex',
+                flexDirection: 'column',
+                width: '100%',
+                height: '100%',
+                position: 'relative',
+              }}
+            >
               <div
                 style={{
-                  display: "flex",
-                  width: "100%",
-                  height: "fit-content",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}>
-                <Image src="/rectangle 2.png" height="148" width="359"></Image>
+                  display: 'flex',
+                  width: '100%',
+                  height: 'fit-content',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Image
+                  src='/rectangle 2.png'
+                  height='148'
+                  width='359'
+                ></Image>
               </div>
               <div
                 style={{
-                  display: "flex",
-                  width: "100%",
-                  height: "fit-content",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  paddingTop: "20px",
-                }}>
+                  display: 'flex',
+                  width: '100%',
+                  height: 'fit-content',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingTop: '20px',
+                }}
+              >
                 <div
                   style={{
-                    display: "flex",
-                    width: "fit-content",
-                    height: "fit-content",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}>
-                  <div></div>
-                  <Image src="/map.png" height="275" width="426"></Image>
-                  <div></div>
+                    display: 'flex',
+                    width: 'fit-content',
+                    height: 'fit-content',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '20px',
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      height: '228px',
+                      justifyContent: 'end',
+                      fontSize: '18px',
+                      color: '#936F01',
+                    }}
+                  >
+                    <span>Home</span>
+                    <span>About Us</span>
+                    <span>Our Healing Center</span>
+                    <span>News & Media</span>
+                    <span>Programs</span>
+                    <span>Online Programs</span>
+                  </div>
+                  <Image
+                    src='/map.png'
+                    height='275'
+                    width='426'
+                  ></Image>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      height: '158px',
+                      // justifyContent: 'center',
+                      alignSelf: 'end',
+                      fontSize: '18px',
+                      color: '#936F01',
+                    }}
+                  >
+                    <span>Privacy Policy</span>
+                    <span>Term & Conditions</span>
+                    <span>Copyright Policy</span>
+                    <span>Disclaimer</span>
+                  </div>
                 </div>
+              </div>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  width: '70%',
+                  alignSelf: 'CENTER',
+                  marginTop: '50px',
+                }}
+              >
+                <article
+                  style={{
+                    display: 'flex',
+                    gap: '15px',
+                    color: '#936F01',
+                    alignItems: 'center',
+                  }}
+                >
+                  <img
+                    src='/callicon.png'
+                    alt=''
+                  />{' '}
+                  <span>+91 8178546612</span>
+                </article>
+                <article
+                  style={{
+                    display: 'flex',
+                    gap: '15px',
+                    color: '#936F01',
+                    alignItems: 'center',
+                  }}
+                >
+                  <img
+                    src='/callicon.png'
+                    alt=''
+                  />{' '}
+                  <span>info@panchatattva.in</span>
+                </article>
+                <article
+                  style={{
+                    display: 'flex',
+                    gap: '15px',
+                    color: '#936F01',
+                    alignItems: 'center',
+                  }}
+                >
+                  <img
+                    src='/callicon.png'
+                    alt=''
+                  />{' '}
+                  <span>
+                    Panchatattva, C-175, Sector 100, Noida, Uttar Pradesh –
+                    201303
+                  </span>
+                </article>
+              </div>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  width: '100%',
+                  alignSelf: 'end',
+                  justifyContent: 'center',
+                  position: 'absolute',
+                  bottom: '0',
+                  background: '#FFFFFF',
+                  fontSize: '14px',
+                  padding: '2px',
+                  color: '#6D6D6D',
+                  boxShadow: '0px 0px 4px 0px rgba(0,0,0,.25)',
+                }}
+              >
+                <span style={{ fontSize: '20px', marginRight: '5px' }}>
+                  &#169;
+                </span>{' '}
+                2023 Panchatattva Naturopathy Clinic. All Right Reserved
               </div>
             </div>
           </div>

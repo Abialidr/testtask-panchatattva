@@ -430,7 +430,7 @@
   gap: 25px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #936e01e7;
-  padding: 50px;
+  padding: 20px;
   width: 100%;
   justify-content: center;
 }
@@ -461,15 +461,34 @@
 .mcuimgBody {
   font-size: 11px;
   text-align: center;
-  width: 80%;
+  /* width: 80%; */
 }
 .OurHealingCenterDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 40px;
   padding: 60px 0px;
+  position: relative;
+}
+.imgAbsolute5 {
+  position: absolute;
+  transform: rotate(82deg);
+  left: -120px;
+  bottom: -00px;
+  opacity: 0.3;
+  z-index: -1;
+
+  width: 595px;
+}
+.imgAbsolute6 {
+  position: absolute;
+  transform: rotate(270deg);
+  right: -120px;
+  opacity: 0.3;
+  z-index: -1;
+  width: 595px;
 }
 .OurHealingCenterSpan {
   font-size: 33px;
@@ -490,6 +509,10 @@
   padding-top: 30px;
   box-shadow: 0px 0px 12px 0px #00000036;
   border-radius: 8px;
+  transition: transform 0.3s;
+}
+.OHCcard:hover {
+  transform: scale(1.1);
 }
 .OHCcard img {
   width: 80%;
@@ -505,7 +528,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 50px;
+  gap: 90px;
 }
 .OurProgrammaindiv {
   display: grid;
@@ -513,8 +536,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 75%;
-  column-gap: 50px;
+  width: 85%;
+  column-gap: 70px;
   row-gap: 100px;
 }
 .OPsqaures {
@@ -542,9 +565,9 @@
   height: 100%;
   border: 1.5px solid #936f01;
   position: absolute;
-  right: 10%;
-  left: 10%;
-  bottom: 10%;
+  right: 8%;
+  left: 8%;
+  bottom: 8%;
 }
 .HealingStory {
   display: flex;
@@ -592,14 +615,20 @@
 }
 .ReviewTestimonialsMainDiv {
   position: relative;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 .ReviewTestimonialsdescDiv {
   background-color: #936f01;
   width: 705px;
   height: 283px;
-  background: linear-gradient(to bottom, #936f01, #936e012c);
-  opacity: 0.8;
+  background: linear-gradient(to bottom, #936e01d5, #936e012c);
+  opacity: 0.89;
+  display: flex;
   border-radius: 11px;
+}
+.ReviewTestimonialsdescDiv div {
+  width: 40%;
 }
 .backGrounddiv1 {
   background-color: rgba(147, 110, 1, 0.192);
@@ -620,4 +649,161 @@
   right: -40px;
   border-radius: 25px;
   box-shadow: 7px -4.24px 11.31px 0px rgba(155, 116, 1, 0.35);
+}
+.ReviewTestimonialsdesc {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  width: 60% !important;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: '20px';
+  color: white;
+  width: 100%;
+  font-size: 14px;
+}
+.rating img {
+  width: 90px;
+}
+.ReviewTestimonialsdesc article span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.ReviewTestimonialsdesc article p {
+  font-size: 11px;
+  color: #1e1e1e;
+}
+.BookApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0px;
+  gap: 20px;
+}
+.OurHealingCentermainDiv {
+  background-color: #936f01;
+  width: 90%;
+  border-radius: 10px;
+  height: 682px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.leftDivOH {
+  width: 50%;
+  padding: 80px 60px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.OHcontactDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.OHcontactDiv article {
+  display: flex;
+  font-size: 22px;
+  color: white;
+  align-items: start;
+  gap: 20px;
+}
+.RightDivOH {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 38px;
+}
+.form {
+  background-color: white;
+  height: 100%;
+  max-width: 90%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 20;
+}
+.form input {
+  border: 1px solid #936f01;
+  padding: 8px 30px;
+  border-radius: 5px;
+}
+.form select {
+  border: 1px solid #936f01;
+  padding: 8px 30px;
+  border-radius: 5px;
+}
+.form textarea {
+  border: 1px solid #936f01;
+  padding: 8px 30px;
+  border-radius: 5px;
+}
+.gridForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.radieoBtndiv {
+  width: 100%;
+  border: 1px solid #936f01;
+  border-radius: 8px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.radieoBtndiv article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #8d8d8d;
+}
+.form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #936f01;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.imgAbsolute1 {
+  position: absolute;
+  transform: rotate(82deg);
+  left: -220px;
+  top: -250px;
+  opacity: 0.5;
+}
+.imgAbsolute2 {
+  position: absolute;
+  transform: rotate(82deg);
+  left: -220px;
+  bottom: -300px;
+  opacity: 0.5;
+}
+.imgAbsolute3 {
+  position: absolute;
+  transform: rotate(270deg);
+  right: -220px;
+  top: -250px;
+  opacity: 0.5;
+}
+.imgAbsolute4 {
+  position: absolute;
+  transform: rotate(270deg);
+  right: -220px;
+  bottom: -300px;
+  opacity: 0.5;
 }

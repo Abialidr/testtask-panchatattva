@@ -5,7 +5,48 @@ import useWindowSize from '@rooks/use-window-size';
 
 export default function Home() {
   const { innerWidth: windowWidth } = useWindowSize();
-
+  const arr = [
+    {
+      img: '/Group1.png',
+      name: 'Weight management',
+    },
+    {
+      img: '/Group2.png',
+      name: 'Diabetes management',
+    },
+    {
+      img: '/Group3.png',
+      name: 'Cardiac Care',
+    },
+    {
+      img: '/Group4.png',
+      name: 'Pain management',
+    },
+    {
+      img: '/Group5.png',
+      name: 'Hormonal Care',
+    },
+    {
+      img: '/Group6.png',
+      name: 'Skin Care',
+    },
+    {
+      img: '/Group7.png',
+      name: 'Allergy  Care',
+    },
+    {
+      img: '/Group8.png',
+      name: 'Pregnancy Care',
+    },
+    {
+      img: '/Group9.png',
+      name: 'Stress Management',
+    },
+    {
+      img: '/Group10.png',
+      name: 'Detoxification',
+    },
+  ];
   return (
     <div className='mainDiv'>
       <div
@@ -43,11 +84,11 @@ export default function Home() {
           <article className={styles.card1UpperPart}>
             <p className={styles.imgContainer}>
               <img
-                src='/Group 1000001871.png'
+                src='/vihar.png'
                 alt=''
               />
             </p>
-            <p className={styles.CardName}>Ahaar</p>
+            <p className={styles.CardName}>Vihaar</p>
           </article>
           <article className={styles.card1LowerPart}>
             <p className={styles.card1desc}>
@@ -62,11 +103,11 @@ export default function Home() {
           <article className={styles.card1UpperPart}>
             <p className={styles.imgContainer}>
               <img
-                src='/Group 1000001871.png'
+                src='/nidra.png'
                 alt=''
               />
             </p>
-            <p className={styles.CardName}>Ahaar</p>
+            <p className={styles.CardName}>Nidra</p>
           </article>
           <article className={styles.card1LowerPart}>
             <p className={styles.card1desc}>
@@ -82,11 +123,11 @@ export default function Home() {
           <article className={styles.card1UpperPart}>
             <p className={styles.imgContainer}>
               <img
-                src='/Group 1000001871.png'
+                src='/dhyana.png'
                 alt=''
               />
             </p>
-            <p className={styles.CardName}>Ahaar</p>
+            <p className={styles.CardName}>Dhyana</p>
           </article>
           <article className={styles.card1LowerPart}>
             <p className={styles.card1desc}>
@@ -147,6 +188,7 @@ export default function Home() {
               <img
                 src='/Group.png'
                 alt=''
+                style={{ width: '40px', height: '40px' }}
               />
             </span>
             <span className={styles.mcuimgHead}>
@@ -161,54 +203,64 @@ export default function Home() {
           <article>
             <span className={styles.mcuimgContainer}>
               <img
-                src='/Group.png'
+                src='/ebm.png'
                 alt=''
+                style={{ width: '40px', height: '40px' }}
               />
             </span>
-            <span className={styles.mcuimgHead}>
-              No medicines or supplements used
-            </span>
+            <span className={styles.mcuimgHead}>Evidenced Based Medicine</span>
             <span className={styles.mcuimgBody}>
-              Our approach is purely based on an individual’s lifestyle and the
-              connection between Mind-Body-Soul. It is drugless, safe and
-              effective
+              Our approach is guided by the best available research data,
+              balanced with the doctor’s judgement and patient’s values.
             </span>
           </article>
           <article>
             <span className={styles.mcuimgContainer}>
               <img
-                src='/Group.png'
+                src='/individual appraisal-appraisal-assessment-evaluate-review-test.png'
                 alt=''
+                style={{ width: '40px', height: '40px' }}
               />
             </span>
-            <span className={styles.mcuimgHead}>
-              No medicines or supplements used
-            </span>
+            <span className={styles.mcuimgHead}>Individualized programs</span>
             <span className={styles.mcuimgBody}>
-              Our approach is purely based on an individual’s lifestyle and the
-              connection between Mind-Body-Soul. It is drugless, safe and
-              effective
+              Each one of us being different with regards to the body type,
+              mindset, likes and dislikes, our programs are designed to meet
+              individual requirements and goals. Not just weight loss, but we
+              believe in overall health, managing the chronic diseases and
+              restoring the factor of wellness.
             </span>
           </article>
           <article>
             <span className={styles.mcuimgContainer}>
               <img
-                src='/Group.png'
+                src='/noun-virtual-4654903 1.png'
                 alt=''
+                style={{ width: '40px', height: '40px' }}
               />
             </span>
-            <span className={styles.mcuimgHead}>
-              No medicines or supplements used
-            </span>
+            <span className={styles.mcuimgHead}>Virtual programs</span>
             <span className={styles.mcuimgBody}>
-              Our approach is purely based on an individual’s lifestyle and the
-              connection between Mind-Body-Soul. It is drugless, safe and
-              effective
+              We have something for all those living far away or running a busy
+              life. All you need to do is book an appointment with our doctors
+              and we shall reach back to you as soon as we can with our online
+              program details and help you deal with it over an audio/video
+              call.
             </span>
           </article>
         </div>
       </div>
       <div className={styles.OurHealingCenterDiv}>
+        <img
+          src='/flower2.png'
+          alt=''
+          className={styles.imgAbsolute5}
+        />
+        <img
+          src='/flower2.png'
+          alt=''
+          className={styles.imgAbsolute6}
+        />
         <span className={styles.OurHealingCenterSpan}>Our Healing Center</span>
         <div className={styles.OurHealingCenterMainDiv}>
           <div className={styles.OHCcard}>
@@ -220,123 +272,38 @@ export default function Home() {
           </div>
           <div className={styles.OHCcard}>
             <img
-              src='/Rectangle 3869.png'
+              src='/Rectangle 38691.png'
               alt=''
             />
-            <span>Relieve Ache & pains</span>
+            <span>Healing & Strengthening</span>
           </div>
           <div className={styles.OHCcard}>
             <img
-              src='/Rectangle 3869.png'
+              src='/Rectangle 38692.png'
               alt=''
             />
-            <span>Relieve Ache & pains</span>
+            <span>Ayurveda Spa</span>
           </div>
         </div>
       </div>
       <div className={styles.OurProgramdiv}>
         <span className={styles.OurHealingCenterSpan}>Our Program</span>
         <div className={styles.OurProgrammaindiv}>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
-          <div className={styles.OPsqaures}>
-            <div class={styles.borderbox}></div>
-            <article>
-              <img
-                src='/Group1.png'
-                alt=''
-              />
-              <span>Weight management</span>
-            </article>
-          </div>
+          {arr.map((val, key) => {
+            return (
+              <div className={styles.OPsqaures}>
+                <div class={styles.borderbox}></div>
+                <article>
+                  <img
+                    src={val.img}
+                    alt=''
+                    style={{ width: '45px', height: '45px' }}
+                  />
+                  <span>{val.name}</span>
+                </article>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className={styles.HealingStory}>
@@ -357,17 +324,212 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={styles.BookApp}>
+        <span className={styles.OurHealingCenterSpan}>Book Appointment </span>
+        <div className={styles.OurHealingCentermainDiv}>
+          <img
+            src='/flower2.png'
+            alt=''
+            className={styles.imgAbsolute1}
+          />
+          <img
+            src='/flower2.png'
+            alt=''
+            className={styles.imgAbsolute2}
+          />
+          <img
+            src='/flower2.png'
+            alt=''
+            className={styles.imgAbsolute3}
+          />
+          <img
+            src='/flower2.png'
+            alt=''
+            className={styles.imgAbsolute4}
+          />
+          <div className={styles.leftDivOH}>
+            <img
+              src='/Logo-2 1.png'
+              alt=''
+              style={{ width: '450px' }}
+            />
+            <div className={styles.OHcontactDiv}>
+              <article>
+                <img
+                  src='/bxs_phone-call.png'
+                  alt=''
+                />
+                <span>+91 8178546612</span>
+              </article>
+              <article>
+                <img
+                  src='/bxs_phone-call.png'
+                  alt=''
+                />
+                <span>info@panchatattva.in</span>
+              </article>
+              <article>
+                <img
+                  src='/bxs_phone-call.png'
+                  alt=''
+                />
+                <span>
+                  Panchatattva, C-175, Sector 100, Noida, Uttar Pradesh – 201303
+                </span>
+              </article>
+            </div>
+          </div>
+          <div className={styles.RightDivOH}>
+            <div className={styles.form}>
+              <input
+                type='text'
+                placeholder='Enter Full Name'
+              />
+              <input
+                type='text'
+                placeholder='Email'
+              />
+              <input
+                type='text'
+                placeholder='Phone Number'
+              />
+              <div className={styles.gridForm}>
+                <select
+                  name=''
+                  id=''
+                >
+                  <option value=''>Male</option>
+                  <option value=''>Female</option>
+                </select>
+                <select
+                  name=''
+                  id=''
+                >
+                  <option value=''>Male</option>
+                  <option value=''>Female</option>
+                </select>
+                <select
+                  name=''
+                  id=''
+                >
+                  <option value=''>Male</option>
+                  <option value=''>Female</option>
+                </select>
+                <select
+                  name=''
+                  id=''
+                >
+                  <option value=''>Male</option>
+                  <option value=''>Female</option>
+                </select>
+                <input
+                  placeholder='Type of Appointment'
+                  type='text'
+                />
+                <select
+                  name=''
+                  id=''
+                >
+                  <option value=''>Male</option>
+                  <option value=''>Female</option>
+                </select>
+                <div className={styles.radieoBtndiv}>
+                  <article>
+                    <label htmlFor='radio1'>In Person</label>
+                    <input
+                      type='radio'
+                      name='Selction'
+                      id='radio1'
+                    />
+                  </article>
+                  <article>
+                    <label htmlFor='radio2'>Virtual</label>
+                    <input
+                      type='radio'
+                      name='Selction'
+                      id='radio2'
+                    />
+                  </article>
+                </div>
+              </div>
+
+              <textarea
+                name=''
+                id=''
+                cols='30'
+                rows='5'
+                placeholder='Describe Health Issue'
+              ></textarea>
+              <button>Book Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={styles.ReviewTestimonials}>
         <span className={styles.OurHealingCenterSpan}>
           Review & Testimonials
         </span>
         <div className={styles.ReviewTestimonialsMainDiv}>
+          <div
+            style={{
+              background: 'white',
+              position: 'absolute',
+              zIndex: '10',
+              top: '-60px',
+              left: '50px',
+              height: '344px',
+              width: '220px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '8px',
+            }}
+          >
+            <img
+              height='336px'
+              width='212px'
+              src='https://images.unsplash.com/photo-1592621385645-e41659e8aabe?auto=format&fit=crop&q=80&w=1894&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              alt=''
+              style={{
+                borderRadius: '8px',
+              }}
+            />
+          </div>
+
           <div className={styles.ReviewTestimonialsdescDiv}>
             <div></div>
             <div className={styles.ReviewTestimonialsdesc}>
-              I recently visited the Ayurvedic Clinic and had a wonderful
-              experience. The staff was friendly and welcoming, creating a warm
-              and calming atmosphere.
+              <div
+                className={styles.rating}
+                style={{ width: '100%' }}
+              >
+                <img
+                  src='/Group 1000001872.png'
+                  alt=''
+                />
+                4.5 rating
+              </div>
+              <span
+                style={{
+                  fontSize: '18px',
+                  color: 'white',
+                  opacity: '1',
+                  display: 'flex',
+                  alignItems: 'center',
+                  zIndex: '20',
+                }}
+              >
+                <p>
+                  I recently visited the Ayurvedic Clinic and had a wonderful
+                  experience. The staff was friendly and welcoming, creating a
+                  warm and calming atmosphere.
+                </p>
+                <p style={{ fontSize: '40px' }}>{'>'}</p>
+              </span>
+              <article>
+                <span>Elisa Grant</span>
+                <p>Legacy Solution Engineer</p>
+              </article>
             </div>
           </div>
           <div className={styles.backGrounddiv1}></div>
